@@ -1,29 +1,59 @@
 import { Center } from "@mantine/core";
 import React from "react";
 import TutorialElement from "../components/TutorialElement";
+import Link from "next/link";
+import Image from "next/image";
 
 const course = () => {
     return (
-        <div className="container mx-auto p-6 grid grid-rows-1 lg:grid-cols-2 gap-4 drop-shadow-lg lg:mt-20">
+        <div className="container mx-auto p-6 grid grid-rows-[auto_1fr_auto] lg:grid-cols-2 gap-4 drop-shadow-lg lg:mt-20">
+            {/* 第一行，左右兩個元件 */}
             <div className="col-span-1 flex flex-col p-4 border-2 hover:border-primary bg-base-100">
                 <TutorialElement
-                    src="/course.png"
-                    link="https://hahow.in/cr/kookiefunk"
-                    title="HAHOW 線上課程"
-                    desc="這是我的第一堂在HAHOW好學校上架的線上課程，內容是分享我在學畫圖過程中所體會到素描之重要性，以及要如何實際去運用素描提升自己的插畫能力，適合初學者入門者"
+                    src="/course_l.png"
+                    link="https://hahow.in/cr/kookiefunk2"
+                    title=""
+                    desc=""
                 />
             </div>
             <div className="col-span-1 flex flex-col p-4 border-2 hover:border-primary bg-base-100">
                 <TutorialElement
-                    src="/youtube.png"
-                    link="https://www.youtube.com/@kookiefunk"
-                    title="Youtube"
-                    desc="我的Youtube有一些免費的好康，包括繪畫的技巧、想法分享，並且不定時開開直播聊聊天畫
-畫圖。"
+                    src="/course_r.png"
+                    link="https://hahow.in/cr/kookiefunk"
+                    title=""
+                    desc=""
                 />
+            </div>
+
+            {/* 第二行，文字居中 */}
+            <div className="col-span-2 flex justify-center pt-6 text-gray-500">
+                <p className="text-center text-xs mb-4 tracking-[0.28em] font-sans">
+                    {"溫馨提醒："} <br />
+                    {
+                        "點擊此網頁的連結進入課程頁面後購買課程，可以幫助曲奇拿9成分潤。好人一生平安。"
+                    }
+                    <br />
+                </p>
+            </div>
+ 
+            {/* 第三行，第三個元件 */}
+            <div className="col-span-2 flex flex-col p-4 border-2 hover:border-primary bg-base-100">
+            <Link href={"https://ancient-lentil-a04.notion.site/fcd9bcdd18234450bb7838205eab6fcd?pvs=4"} target="_blank">
+            <div className="flex flex-col">
+                <Image
+                    src={"/guide.png"}
+                    alt={""}
+                    width="500"
+                    height="500"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.jpeg"
+                    className=" object-fill w-full"
+                    priority={true}
+                ></Image>
+            </div>
+        </Link>
             </div>
         </div>
     );
 };
-
 export default course;

@@ -345,8 +345,7 @@ const PostEditPage = () => {
                         className="text-xl mb-10"
                         icon={<IconAlertCircle size={16} />}
                         title={`😩🍆🍑💦  ${gloableError}`}
-                        color="red"
-                    >
+                        color="red" children={undefined}                    >
                         {}
                     </Alert>
                 )}

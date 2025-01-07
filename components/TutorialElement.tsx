@@ -13,7 +13,7 @@ type TutorialProps = {
 function TutorialElement(props: TutorialProps) {
     return (
         <Link href={props.link} target="_blank">
-            <div className="flex flex-col pt-6 pl-6 pr-6 ">
+            <div className="flex flex-col">
                 <Image
                     src={props.src}
                     alt={""}
@@ -25,14 +25,14 @@ function TutorialElement(props: TutorialProps) {
                     priority={true}
                 ></Image>
 
-                <div className="pt-6 flex flex-col text-gray-500">
+                {/* <div className="pt-6 flex flex-col text-gray-500">
                     <h5 className="text-xl font-semibold mb-4">
                         {props.title}
                     </h5>
                     <p className="text-inherit text-xs mb-4 tracking-[0.28em] font-sans">
                         {props.desc}
                     </p>
-                </div>
+                </div> */}
             </div>
         </Link>
     );
