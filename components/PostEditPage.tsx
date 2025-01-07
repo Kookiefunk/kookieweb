@@ -344,10 +344,10 @@ const PostEditPage = () => {
                     <Alert
                         className="text-xl mb-10"
                         icon={<IconAlertCircle size={16} />}
-                        title={`😩🍆🍑💦  ${gloableError}`}
+                        title={`😩🍆🍑💦`}
                         color="red"
-                        children={<></>}
                     >
+                        {gloableError}
                     </Alert>
                 )}
                 <Stepper
