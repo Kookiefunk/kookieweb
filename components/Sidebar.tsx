@@ -30,7 +30,7 @@ const Sidebar = ({ children }: Props) => {
 
     const menuItems: MenuItem[] = [
         { label: "works", link: "/works", enable: true },
-        { label: "store", link: "", enable: false },
+        { label: "store", link: "https://docker-image-production-e450.up.railway.app/", enable: true },
         { label: "tutorials", link: "/tutorial", enable: true },
     ];
 
